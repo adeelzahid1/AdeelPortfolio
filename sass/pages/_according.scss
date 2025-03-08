@@ -1,0 +1,89 @@
+.according{
+    background-color: #0000;
+    &__container{
+        width: 100%;
+        max-width: 1200px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__body{
+        padding-top: 27px;
+        padding-bottom: 24px;
+    }
+    &__h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 400;
+        // color: #fff;
+        color: var(--text-color);
+        line-height: 27px;
+        margin-bottom: 59px;
+    }
+    &__faq{
+        border-bottom: 2px solid #615D5D;
+        cursor: pointer;
+    }
+    &__question{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3{
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            // color: #fff;
+            color: var(--text-color);
+             line-height: 27px;
+             padding-bottom: 5px;
+             margin-top: 23px;
+             margin-bottom: 10px;
+            :first-child{
+                margin-top: 0;
+            }
+        }
+        
+       
+       svg{
+        transition: transform 0.5s ease-in;
+        color: var(--text-color)!important;
+       }
+    }
+    &__answer{
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 1.4s ease;
+       
+        
+        p{
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color:#9B9B9B;
+            padding-top: 22px;
+        padding-bottom: 31px;
+            line-height: 27px;
+        }
+    }
+    &__faq.active &__answer{
+        max-height: 300px;
+        border-top: 2px solid #615D5D;
+        animation: fade 1s ease-in-out;
+        // overflow: visible;
+    }
+    
+    .active  svg{
+        transform: rotate(180deg);
+    }
+    @keyframes fade {
+        from{
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}

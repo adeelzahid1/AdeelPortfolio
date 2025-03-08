@@ -60,7 +60,8 @@
     &__language-h1{
         font-size: 24px;
         letter-spacing: 25;
-        color: #fff;
+        // color: #fff;
+        color: var(--text-color);
         line-height: 33px;
         font-weight: bold;
         margin-top: -10px;

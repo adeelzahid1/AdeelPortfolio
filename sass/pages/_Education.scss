@@ -22,13 +22,15 @@
         font-weight: lighter;
         color:#ED2B23;
         display: inline-block;
+        font-weight: 500;
     }
     &__education_h2{
         font-size: 20px;
         letter-spacing: 25;
         line-height: 30px;
         font-weight: 600;
-        color: #fff;
+        // color: #fff;
+        color: var(--text-color);
         margin-top: 4.3px;
     }
     &__education-p{
@@ -40,7 +42,7 @@
     &__education-bottom-row{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        // justify-content: center;
         width: 100%;
         &:first-child{
             // border-bottom: 1px solid #3D3D52;

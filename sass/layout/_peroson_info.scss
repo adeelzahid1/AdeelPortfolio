@@ -1,6 +1,10 @@
 .typing{
     color: crimson;
 }
+.no-bg {
+    /* position: relative !important; */
+    background-image: url() !important;
+  }
 .person{
     width: 100%;
     height: 850px;
@@ -9,8 +13,12 @@
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
     // border: 1px solid red;
-
+    @include respond(tab-land-1600){
+        height: 674px;
+        padding: 100px 49px 29px 65px;
+    }
     @include respond(big-desktop-min-2){
         padding-left: 50px;
         height: 630px;
@@ -78,16 +86,21 @@
         text-align: right;
         @include respond(big-desktop-min-4){
            right: 4%;
-           height: 700px;
+           bottom: -9%;
+        //    height: 700px;
         }
         @include respond(big-desktop-min-2){
-            right:14%;
-            bottom: 0%;
-            height:570px;
+            // right:14%;
+            // bottom: 0%;
+            // height:570px;
+               right: 12%;
+               bottom: 0%;
+               height: 700px;
         }
         @include respond(tab-port){
             // display: none;
-            right: 3%;
+            // right: 3%;
+            right: 0%;
         }
         @include respond(zero-size-1){
             display: none;
@@ -105,9 +118,13 @@
     }
     &__person-h4{
         font-size: 34px;
-        color: #fff;
+        // color: #fff;
+        color: var(--text-color);
         letter-spacing: 31.96;
         font-weight: 400;
+        @include respond(tab-land-1600){
+            font-size: 26px;
+        }
         @include respond(big-desktop-min-2){
             font-size: 30px;
         }
@@ -118,11 +135,15 @@
    
     &__mudssar-title{
         font-size: 68.92px;
-        color: #fff;
+        // color: #fff;
+        color: var(--text-color);
         font-weight: bold;
         line-height: 82.71px;
         text-transform: uppercase;
-        
+        position: relative;
+        span{
+            color: crimson;
+        }
         
         @include respond(tab-port){
             font-size: 56px;
@@ -141,6 +162,11 @@
     &__person-my-title{
         font-size: 27px;
         margin-top: 146.9px;
+        color: var(--text-color);
+         @include respond(tab-land-1600){
+            font-size: 27px;
+            margin-top: 63.9px;
+         }
         @include respond(tab-port){
             
             margin-top: 100px;
@@ -158,25 +184,53 @@
         }
     }
     &__person-subline-title{
-        font-size: 21.98px;
-        color: #545469;
-        line-height: 26.37px;
+        font-size: 19.98px !important;
+        color: #545469 !important;
+        line-height: 26.37px !important;
         display: inline-block;
         text-align: right;
         position: absolute;
         bottom: -25px ;
         left: 337px;
+        font-weight: 400;
+        letter-spacing: 1px;
         @include respond(tab-port){
             left: 314px;
         }
         @include respond(phone){
 
             left: 60px;
-            font-size: 15px;
-            color: red;
+            font-size: 15px !important;
+            color: red !important;
             bottom: -21px;
         }
       
+    }
+     &__mudssar-title-2{
+        font-size: 33.92px;
+        // color: #fff;
+        color: var(--text-color);
+        font-weight: 500;
+        line-height: 55.71px;
+        text-transform: uppercase;
+        margin-top: 34px;
+        span{
+            color: crimson;
+        }
+        
+        @include respond(tab-port){
+            font-size: 36px;
+          
+        }
+        @include respond(phone){
+            font-size: 25px;
+            line-height: 35px;
+       
+        }
+        @include respond(zero-size-1){
+            font-size: 25px;
+            
+        }
     }
     &__person-left-content{
         display: flex;
@@ -198,7 +252,8 @@
         font-size: 22px;
         letter-spacing: 25;
         margin-bottom: -8px;
-        color: #fff;
+        // color: #fff;
+        color: var(--text-color);
         @include respond(zero-size-1){
             font-size: 18px;
         }
@@ -281,7 +336,7 @@
         span{
             display: inline-block;
             font-size: 25px;
-          
+            fill: red; 
         }
     }
 }

@@ -57,7 +57,8 @@
     }
     &__services-h2{
         font-size: 20px;
-        color: #fff;
+        // color: #fff;
+        color: var(--text-color);
         line-height: 30px;
         letter-spacing: 25;
         font-weight: 600;

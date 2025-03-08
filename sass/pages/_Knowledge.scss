@@ -71,7 +71,8 @@
     }
     &__knowledge-link{
         font-size: 14px;
-        color: #fff;
+        // color: #fff;
+        color: var(--text-color);
         display: inline-block;
        
     }

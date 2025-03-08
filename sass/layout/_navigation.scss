@@ -1,7 +1,48 @@
-#menu-bar:checked ~ .nav-list{
-    left: 0%;
-  }
 
+.dark-light {
+    position: absolute;
+    right: 13%;
+  }
+  
+  .dark-light i {
+    position: relative;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  .dark-light i.sun {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .dark-light.active i.sun {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .dark-light.active i.moon {
+    opacity: 0;
+    pointer-events: none;
+  }
+  @media(max-width:992px){
+    .dark-light {
+        right: 23%;
+    }
+  }
+  @media(max-width:768px){
+    .dark-light {
+        right: 23%;
+    }
+  }
+  @media(max-width:576px){
+    .dark-light {
+        right: 33%;
+    }
+  }
 .nav{
     position: absolute;
     top: 0px;
@@ -149,6 +190,7 @@
         height: 30px;
         width: 33px;
         position: relative;
+        cursor: pointer;
     }
     &__menu-span{
         position: absolute;
@@ -207,9 +249,9 @@
         }
     }
    
-    &__nav-container #menu-bar:checked ~ &__nav-list{
-        right: 0%;
-    }
+    // &__nav-container #menu-bar:checked ~ &__nav-list{
+    //     right: 0%;
+    // }
 
 
 
@@ -314,13 +356,13 @@
     }
 
 
-.nav #show-search:checked ~ .search-icon i::before{
+nav #show-search:checked ~ .search-icon i::before{
     content: "\f00d";
     font-size: 22px;
     display: inline-block;
   }
 
-.nav #show-search:checked ~ .search-box{
+nav #show-search:checked ~ .search-box{
     opacity: 1;
     pointer-events: auto;
   }
@@ -328,4 +370,10 @@
   .d-none{
       display: none;
   }
- 
+  .searchBoxShow{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav .show{
+    right: 0;
+  }

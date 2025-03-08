@@ -71,7 +71,8 @@
     }
     &__footer-h2{
         font-size: 18px;
-        color: #fff;
+        // color: #fff;
+        color: var(--text-color);
         font-weight: bold;
         line-height: 30px;
     }
