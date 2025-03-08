@@ -1,12 +1,12 @@
 {
-  "name": "haseebprofile",
+  "name": "Adeel Zahid Portfolio",
   "version": "1.0.0",
   "description": "I am starting with sass hope it goes all:)",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
-  "author": "Haseeb Zahid",
+  "author": "Adeel Zahid",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.1"
