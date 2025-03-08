@@ -1,0 +1,85 @@
+
+.mySwiper2 {
+    width: 100%;
+    // height: 100%;
+    // height: 80vh;
+    height: 760px;
+ 
+  // margin-bottom: 100px !important;
+  
+    @include respond(tab-port-1){
+        // height: 1600px !important;
+        height: 1200px;
+    }
+    @include respond(phone-md){
+      // margin-bottom: 70px;
+    }
+    @include respond(zero-size){
+      // height: 1350px;
+      height: 1450px;
+    }
+    @include respond(zero-size-zero){
+      // height: 1350px;
+      height: 1550px;
+    }
+  }
+
+  .mySwiper2 .swiper-slide {
+    // text-align: center;
+    font-size: 18px;
+    
+    @include respond(tab-land-6){
+      padding-left: 12px;
+      padding-right: 12px;
+
+  }
+    // background: rgb(163, 28, 28) !important;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .mySwiper2  .swiper-pagination-vertical{
+    left: 1rem;
+    top: 6% !important;
+    width: 20px;
+    @include respond(tab-port-1){
+      top: 5% !important;
+    }
+    @include respond(zero-size){
+      top: 3% !important;
+    }
+  }
+  
+  .mySwiper2  .swiper-pagination-bullet{
+    background-color: #55556A !important;
+    opacity: .6;
+    margin-bottom: 10px !important;
+    width: 10px;
+    height: 10px;
+ }
+ .mySwiper2  .swiper-pagination-bullet-active{
+    background-color: #ED2B23 !important;
+    width: 11px;
+    height: 11px;
+    opacity: 1;
+ }

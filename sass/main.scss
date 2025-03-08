@@ -1,0 +1,35 @@
+@import "abstracts/base";
+@import "abstracts/media";
+@import "abstracts/variablesColor";
+@import "abstracts/mixin";
+@import "abstracts/_swiper_slider";
+@import "abstracts/textimonial-slide";
+
+
+
+
+
+@import "layout/navigation";
+@import "layout/peroson_info";
+@import "layout/header";
+@import "layout/footer";
+
+
+@import "components/component";
+
+
+
+
+
+@import "pages/Education";
+@import "pages/Knowledge";
+@import "pages/codingSkills";
+@import "pages/Experience";
+@import "pages/project";
+@import "pages/Textimonials";
+@import "pages/Language";
+@import "pages/interests";
+@import "pages/Services";
+@import "pages/portfolio";
+@import "pages/Contact";
+@import "pages/pricing";

@@ -1,0 +1,91 @@
+.language{
+    position: relative;
+    &__language-row{
+        padding-top: 97.3px;
+        padding-bottom: 150px;
+        display: flex;
+        justify-content: space-between;
+      
+        @include respond(big-desktop-min-2){
+         
+          padding-top: 70px;
+          padding-bottom: 90px;
+        }
+        @include respond(phone-md-2){
+            flex-wrap: wrap;
+            // justify-content: center;
+            // flex-direction: column;
+            // align-items: center;
+        }
+        @include respond(zero-size-1){
+         
+          padding-top: 42px;
+          padding-bottom: 40px;
+        }
+    }
+    &__language-col-3{
+        width: 100%;
+        max-width: 25%;
+        padding: 0 15px;
+        @include respond(phone-md){
+            max-width: 50%;
+        }
+        @include respond(phone){
+            max-width: 100%;
+            padding-top: 1.25rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #55556A;
+        }
+    }
+    &__language-mt-3{
+        @include respond(phone-md-2){
+            margin-top: 2rem;
+        }
+        @include respond(zero-size-1){
+            margin-top: 0;
+        }
+    }
+    .language-border-top{
+        @include respond(phone){
+            border-top: 1px solid #55556A;
+        }
+    }
+    &__language-span-title{
+        font-size: 14px;
+        line-height: 33px;
+        letter-spacing: 25;
+        color: #55556A;
+        display: inline-block;
+    }
+    &__language-h1{
+        font-size: 24px;
+        letter-spacing: 25;
+        color: #fff;
+        line-height: 33px;
+        font-weight: bold;
+        margin-top: -10px;
+    }
+    &__language-dots-flex{
+        margin-top: 41.9px;
+        display: flex;
+        @include respond(phone){
+            margin-top: 30px;
+        }
+        
+        // justify-content: space-between;
+    }
+    &__language-span{
+        width: 100%;
+        max-width: 20px;
+        height: 4px;
+        &:not(:first-child){
+            margin-left: 10px;
+        }
+        background-color: #ED2B23;
+        display: inline-block;
+        
+    }
+    &__language-span-light{
+        background-color:#55556A;
+    }
+}

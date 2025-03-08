@@ -1,0 +1,106 @@
+
+.interests{
+    position: relative;
+    &__interests-row{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 90px;
+        padding-bottom: 148px;
+        @include respond(big-desktop-min-2){
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+        @include respond(zero-size-1){
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+    }
+    &__interests-col-3{
+        padding: 20px 0;
+        width: 100%;
+        max-width: 31.333333%;
+        // border: 1px solid red;
+        @include respond(phone-md){
+            max-width: 30.333333%;
+            padding-left: 10px;
+        }
+        @include respond(zero-size-1){
+            max-width: 100%;
+            padding-left: 10px;
+            &:not(:first-child){
+                margin-top: 1rem;
+            }
+        }
+    }
+    &__interests-col-mt{
+        margin-top: 79px;
+        @include respond(big-desktop-min-2){
+            margin-top: 20px;
+        }
+    }
+    &__interests-line{
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #55556A;
+        margin-top: 29.5px;
+        margin-bottom: 22.6px;
+        transition: all 0.3s ease-out;
+        @include respond(phone){
+            margin-top: 19px;
+            margin-bottom: 19px;
+        }
+    }
+    &__interests-col-3:hover  &__interests-line{
+        background-color: red;
+    }
+    &__interests-img{
+        i{
+            display: inline-block;
+            font-size: 40px;
+            color: #fff;
+            @include respond(big-desktop-min-2){
+                font-size: 32px;
+            }
+        }
+    }
+    &__interests-img-pt{
+        padding-top: 1px;
+    }
+    &__interests-h2{
+        font-size: 24px;
+        color: #fff;
+        line-height: 30px;
+        font-weight: bold;
+        margin-bottom: 17.5px;
+        @include respond(big-desktop-min-2){
+            font-size: 22px;
+            margin-bottom: 15.5px;
+        }
+        @include respond(phone){
+            margin-bottom: 14px;
+        }
+    }
+    &__interests-p{
+        font-size: 14px;
+        color: #55556A;
+        line-height: 30px;
+        @include respond(big-desktop-min-2){
+            line-height: 27px;
+        }
+    }
+    &__interests-sm-none{
+        @include respond(phone){
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+

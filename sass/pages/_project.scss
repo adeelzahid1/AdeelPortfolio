@@ -1,0 +1,124 @@
+.project{
+    position: relative;
+    &__project-container{
+        padding-top:88px;
+        padding-bottom: 150px;
+        @include respond(big-desktop-min-2){
+            padding-top: 50.3px;
+            padding-bottom: 70px;
+            padding-right: 1rem;
+        }
+        @include respond(zero-size-1){
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    &__project-row{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        @include respond(tab-land-6){
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    &__project-mt-1{
+        margin-bottom: 44px;
+    }
+    &__project-col-1,
+    &__project-col-2,
+    &__project-col-3{
+        width: 100%;
+    }
+    &__project-col-1{
+        max-width: 8%;
+        @include respond(phone-md){
+            max-width: 10%;
+        }
+    }
+    &__project-col-2{
+        max-width: 25%;
+        @include respond(phone-md){
+            max-width: 90%;
+        }
+    }
+    &__project-col-3{
+        max-width: 67%;
+        @include respond(phone-md){
+            max-width: 90%;
+            margin-left: auto;
+            margin-top: 2rem;
+        }
+        @include respond(phone){
+            margin-top:1.25rem;
+        }
+    }
+    &__project-left-row{
+        @include respond(phone-md){
+            display: flex;
+            justify-content: space-between;
+            // border: 1px solid red;
+            
+        }
+        @include respond(phone){
+            flex-direction: column;
+        }
+    }
+    &__project-number{
+        color:#ED2B23;
+        font-size:32px;
+        font-weight: bold;
+    }
+    &__project-h2{
+        font-size: 24px;
+        color: #fff;
+        font-weight: bold;
+        line-height: 30px;
+        @include respond(big-desktop-min-2){
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+    &__project-date{
+        font-size: 12px;
+        display: inline-block;
+        color:#ED2B23 ;
+        line-height: 30px;
+    }
+    &__projecn-mt{
+        &:not(:first-child){
+            margin-top: 23px;
+            @include respond(big-desktop-min-2){
+                margin-top: 16px;
+                // margin-left: 3rem;
+            }
+        }
+    }
+    &__project-h3{
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold;
+        line-height: 30px;
+    }
+    &__project-span{
+        font-size: 12px;
+        line-height: 30px;
+        color: #55556a;
+    }
+    &__description-h3{
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        line-height: 30px;
+    }
+    &__description-text{
+        font-size:14px;
+        color: #55556a;
+        line-height: 30px;
+        margin-top: 8px;
+        @include respond(big-desktop-min-2){
+            line-height: 26px;
+            
+        }
+    }
+}

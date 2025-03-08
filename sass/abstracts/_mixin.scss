@@ -1,0 +1,68 @@
+//  skills mixin start  //
+
+@mixin circle {
+	position: relative;
+	padding: 0;
+	box-sizing: border-box;
+	color: black;
+	font-size: 14px;
+	line-height: 1;
+	font-variant: tabular-nums;
+	list-style: none;
+	font-feature-settings: 'tnum';
+	// display: inline-block;
+}
+
+@mixin circle-active {
+	stroke: $c-border-color; // kein verlauf möglich 
+	stroke-width: $c-border-width;
+	stroke-linecap: round;
+	stroke-dashoffset: 0;
+	animation: dash .4s ease-out;
+	animation-fill-mode: forwards;
+}
+
+@mixin circle-text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: rgba(0, 0, 0, 0.65);
+	font-size: 1em;
+	line-height: 1.3;
+	text-align: center;
+}
+
+@mixin circle-inner {
+	position: relative;
+	width: $c-size;
+	height: $c-size;
+    display: inline-block;
+	overflow: hidden;
+    vertical-align: middle;
+	border-radius: 100px;
+    background-color: #fff;
+	font-size: 24px;
+	line-height: 1;
+}
+@mixin svg-circle-path{
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+	
+	circle,
+	.path {
+		stroke-width: $c-border-width;
+		stroke: $c-border-color-default;
+	}
+}
+
+//  skills mixin End  //

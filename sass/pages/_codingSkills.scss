@@ -1,0 +1,197 @@
+.skills{
+    position: relative;
+    &__skills-row{
+        padding-top: 98px;
+        padding-bottom: 150px;
+		@include respond(big-desktop-min-2){
+			padding-top: 60px;
+			padding-bottom: 55px;
+		}
+		@include respond(phone){
+			padding-top: 57.3px;
+			padding-bottom: 50px;
+		}
+    }
+    &__skills-row{
+        display: flex;
+		@include respond(phone-md){
+			flex-wrap: wrap;
+			
+		}
+    }
+    &__skills-col-4{
+        width: 100%;
+        max-width: 25%;
+        text-align: center;
+		// border: 1px solid red;
+		@include respond(phone){
+			max-width: 50%;
+		}
+		
+    }
+	&__skills-col-mt{
+		@include respond(phone){
+			margin-top: 2rem;
+		}
+	}
+	&__circle-subline-title{
+		display: block;
+		font-size: 14px;
+		line-height: 30px;
+		margin-top: 19.7px;
+	}
+}
+
+
+$c-size: 150px !default;
+$c-size-md: 130px !default;
+$c-size-sm: 100px !default;
+$c-border-width: 12px !default;
+$c-border-color: red !default;
+$c-border-color-default: pink !default;
+$c-background: brown;
+
+// das muss ins javascript 
+// und per inline-styles gesetzt werden
+$c-active: 90%;
+$c-active-2: 80%;
+$c-active-3: 85%;
+$c-active-4: 75%;
+$c-umfang: 235; // origin 295.31
+$stroke-dasharray: #{($c-umfang * $c-active) / 100}, $c-umfang;
+$stroke-dasharray-2: #{($c-umfang * $c-active-2) / 100}, $c-umfang;
+$stroke-dasharray-3: #{($c-umfang * $c-active-3) / 100}, $c-umfang;
+$stroke-dasharray-4: #{($c-umfang * $c-active-4) / 100}, $c-umfang;
+
+
+/**
+inspiration:
+https://ant.design/components/progress/
+*/
+
+.circle {
+	@include circle();
+	
+	.inner {
+		@include circle-inner();
+		@include respond(big-desktop-min-2){
+			width: $c-size-md;
+			height: $c-size-md;
+		}
+
+		@include svg-circle-path();
+		
+		.active {
+			@include circle-active();
+			stroke-dasharray: $stroke-dasharray;
+		}
+		
+	}
+	
+	.text {
+		@include circle-text();
+		
+		small {
+			color: rgba(0, 0, 0, 0.35);
+			font-size: .7em;
+		}
+	}
+}
+
+
+.circle-2 {
+	@include circle();
+	
+	.inner {
+		@include circle-inner();
+		@include respond(big-desktop-min-2){
+			width: $c-size-md;
+			height: $c-size-md;
+		}
+
+
+		@include svg-circle-path();
+		
+		.active {
+			stroke-dasharray: $stroke-dasharray-2;
+			@include circle-active();
+		}
+		
+	}
+	
+	.text {
+		@include circle-text();
+		
+		small {
+			color: rgba(0, 0, 0, 0.35);
+			font-size: .7em;
+		}
+	}
+}
+
+
+.circle-3 {
+	@include circle();
+	
+	.inner {
+		@include circle-inner();
+		@include respond(big-desktop-min-2){
+			width: $c-size-md;
+			height: $c-size-md;
+		}
+
+
+		@include svg-circle-path();
+		
+		.active {
+			stroke-dasharray: $stroke-dasharray-3;
+			@include circle-active();
+		}
+		
+	}
+	
+	.text {
+		@include circle-text();
+		
+		small {
+			color: rgba(0, 0, 0, 0.35);
+			font-size: .7em;
+		}
+	}
+}
+
+
+.circle-4 {
+	@include circle();
+	
+	.inner {
+		@include circle-inner();
+		@include respond(big-desktop-min-2){
+			width: $c-size-md;
+			height: $c-size-md;
+		}
+		@include svg-circle-path();
+		
+		.active {
+			stroke-dasharray: $stroke-dasharray-4;
+			@include circle-active();
+		}
+		
+	}
+	
+	.text {
+		@include circle-text();
+		
+		small {
+			color: rgba(0, 0, 0, 0.35);
+			font-size: .7em;
+		}
+	}
+}
+
+
+@keyframes dash {
+  from {
+    stroke-dasharray: 0, 999;
+  }
+}

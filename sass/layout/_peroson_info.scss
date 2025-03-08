@@ -1,0 +1,347 @@
+.typing{
+    color: crimson;
+}
+.person{
+    width: 100%;
+    height: 850px;
+    padding: 148px 49px 29px 95px;
+    position: relative;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    // border: 1px solid red;
+
+    @include respond(big-desktop-min-2){
+        padding-left: 50px;
+        height: 630px;
+        // background-color: red;
+        padding-top: 110px;
+    }
+    @include respond(zero-size-1){
+        padding-left:30px ;
+        height: 550px;
+    }
+    &__person-bg{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        background-image: url(../../img/background.png);
+        background-position: 0% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 90%;
+        height: 100%;
+        z-index: -1;
+        @include respond(big-desktop-min-4){
+            background-position: 35% 50%;
+        }
+        @include respond(big-desktop-min-3){
+            background-position: 43% 50%;
+        }
+     
+       
+        
+        @include respond(big-desktop-min-2){
+            background-position: 52% 50%;
+        }
+        @include respond(big-desktop-min-1){
+            background-position: 62% 50%;
+        }
+       
+        @include respond(zero-size-1){
+            display: none;
+        }
+       
+    }
+  
+  
+    &__person-top{
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+    }
+    &__person-man-icon{
+        padding-right: 13.8px;
+        i{
+            display: inline-block;
+            font-size: 24px;
+            color: #ED2B23;
+        }
+    }
+    &__set{
+        position: absolute;
+        bottom: 0%;
+        right: 8%;
+        height:850px;
+        z-index: -1;
+        
+        text-align: right;
+        @include respond(big-desktop-min-4){
+           right: 4%;
+           height: 700px;
+        }
+        @include respond(big-desktop-min-2){
+            right:14%;
+            bottom: 0%;
+            height:570px;
+        }
+        @include respond(tab-port){
+            // display: none;
+            right: 3%;
+        }
+        @include respond(zero-size-1){
+            display: none;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            // position: relative;
+            background-repeat: no-repeat;
+            height: 100%;
+            //  height: 850px;
+        
+        }
+       
+    }
+    &__person-h4{
+        font-size: 34px;
+        color: #fff;
+        letter-spacing: 31.96;
+        font-weight: 400;
+        @include respond(big-desktop-min-2){
+            font-size: 30px;
+        }
+        @include respond(zero-size-1){
+            font-size: 24px;
+        }
+    }
+   
+    &__mudssar-title{
+        font-size: 68.92px;
+        color: #fff;
+        font-weight: bold;
+        line-height: 82.71px;
+        text-transform: uppercase;
+        
+        
+        @include respond(tab-port){
+            font-size: 56px;
+          
+        }
+        @include respond(phone){
+            font-size: 25px;
+            line-height: 40px;
+       
+        }
+        @include respond(zero-size-1){
+            font-size: 25px;
+            
+        }
+    }
+    &__person-my-title{
+        font-size: 27px;
+        margin-top: 146.9px;
+        @include respond(tab-port){
+            
+            margin-top: 100px;
+        }
+        @include respond(phone){
+           font-size: 16px;
+            margin-top: 57px;
+        }
+        
+    }
+    &__mudssar-subtile{
+        position: relative;
+        @include respond(zero-size-1){
+            padding-left: 10px;
+        }
+    }
+    &__person-subline-title{
+        font-size: 21.98px;
+        color: #545469;
+        line-height: 26.37px;
+        display: inline-block;
+        text-align: right;
+        position: absolute;
+        bottom: -25px ;
+        left: 337px;
+        @include respond(tab-port){
+            left: 314px;
+        }
+        @include respond(phone){
+
+            left: 60px;
+            font-size: 15px;
+            color: red;
+            bottom: -21px;
+        }
+      
+    }
+    &__person-left-content{
+        display: flex;
+    }
+    &__box-icon-botton{
+        align-self: flex-start;
+        margin-right: 32px;
+        margin-top: -4px;
+        span i{
+            display: inline-block;
+            font-size: 32px;
+        }
+    }
+    &__person-small-content{
+        padding-left: 5px;
+        
+    }
+    &__person-h2{
+        font-size: 22px;
+        letter-spacing: 25;
+        margin-bottom: -8px;
+        color: #fff;
+        @include respond(zero-size-1){
+            font-size: 18px;
+        }
+    }
+    &__person-punjab{
+        font-size: 13.98px;
+        letter-spacing: 25;
+        display: inline-block;
+        color:#6f778a;
+        @include respond(zero-size-1){
+            font-size: 11px;
+        }
+    }
+    &__person-bottom-absolute{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 49px 29px 95px;
+        @include respond(tab-port){
+            padding-left: 50px;
+        }
+        @include respond(zero-size-1){
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+    &__person-social-content{
+        display: flex;
+        align-items: center;
+        padding-top: 1rem;
+    }
+    &__person-icon{
+        font-size:17px;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+        display: block;
+        width: 50px;
+        height: 44px;
+        line-height: 44px;
+        color:#6f778a;
+       
+        
+    }
+    
+    &__person-icon-center{
+        width:80px ;
+        text-align: center !important;
+        border-left:1px solid  #55556A;
+    }
+    &__person-icon-right{
+        text-align: right !important;
+        border-left:1px solid  #55556A;
+    }
+  
+  
+ 
+  
+  
+    &__person-tooltip-a{
+        font-size:12px;
+        display: block;
+        color: red;
+       
+        text-align: center;
+        // width: 100%;
+        // max-width: 114px;
+        border-radius: 5px;
+        padding: 8px 15px;
+        background-color: #fff;
+    }
+    
+    &__box-icon-botton {
+        padding-top: 8px;
+        span{
+            display: inline-block;
+            font-size: 25px;
+          
+        }
+    }
+}
+
+
+
+
+
+
+.quick{
+    &__quick-icon{
+        margin: 0 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        // border: 1px solid red;
+    }
+   
+    &__tooltip{
+        border-radius: 2px;
+        position: absolute;
+        top: -35px;
+     
+        transition:  all 0.2s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &__custom-arrow{
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 60%;
+        border-right: 1em solid transparent;
+        border-left: 1em solid transparent;
+        border-top: 1em solid #fff;
+    
+    }
+    &__quick-icon:hover &__tooltip{
+        top: -48px;
+        opacity: 1;
+        visibility: visible;
+        
+    }
+    &__quick-icon:hover .person-hover{
+        transition: all 0.3s ease;
+        color: #ED2B23;
+    }
+    
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+.experience{
+    position: relative;
+    &__slide-margin{
+        padding-top: 98.5px !important;
+        padding-bottom: 150px !important;
+        @include respond(big-desktop-min-2){
+            padding-top:57.3px !important;
+            padding-bottom: 80px !important;
+        }
+        @include respond(tab-port){
+            padding-bottom: 40px;
+        }
+    }
+    &__experience-col{
+        padding-left: 30px;
+        padding-right: 30px;
+        @include respond(tab-port){
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+   &__experience-line{
+    width: 96%;
+    display: block;
+    height: 1px;
+    background-color: #3D3D52;
+    margin-top: 29.7px;
+    margin-bottom: 25.7px;
+    @include respond(big-desktop-min-2){
+        margin-top: 25.7px;
+        margin-bottom: 20.7px;
+    }
+   } 
+   &__experience-img{
+       i{
+        display: inline-block;
+        font-size: 45px;
+        color: #fff;
+        @include respond(big-desktop-min-2){
+            font-size: 38px;
+        }
+       }
+   }
+   &__experience-date{
+       font-size: 14px;
+       display: inline-block;
+       font-weight: 300;
+       color: #ED2B23;
+       line-height: 30px;
+   }
+   &__experience-h2{
+       font-size: 20px;
+       font-weight: 600;
+       line-height: 30px;
+       letter-spacing: 25;
+       margin-bottom: 23.7px;
+       color: #fff;
+       @include respond(big-desktop-min-2){
+           font-size: 18px;
+           margin-bottom: 18.7px;
+       }
+   }
+   &__experience-p{
+       font-size: 14px;
+       line-height: 30px;
+       color: #55556A;
+       @include respond(big-desktop-min-2){
+           line-height: 27px;
+       }
+    //    padding-bottom: 60px;
+   }
+   &__experience-a{
+       font-size: 14px;
+       display: block;
+       line-height: 30px;
+       color: #55556A;
+       @include respond(big-desktop-min-2){
+           line-height: 27px;
+       }
+   }
+   &__experience-item-flex{
+        display: flex;
+   }
+
+}
+
+.experience .owl-theme .owl-dots button{
+    outline: none;
+    border: 1px solid transparent !important;
+    
+  }
+  .experience .owl-theme .owl-dots .owl-dot span{
+    width: 12px;
+     height: 12px;
+     background-color: #55556A;
+   
+     opacity: 1;
+     border-radius: 50px;
+     margin: 0 4px;
+     border: 1px solid transparent;
+     
+  }
+  .experience .owl-theme .owl-dots .owl-dot.active span,
+  .experience .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: #ED2B23;
+    // opacity: 0.5;
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 4px;
+    border: 1px solid transparent;
+  }
+  .experience .owl-theme .owl-dots{
+    width: 100%;
+    position:absolute;
+    bottom: -22%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+  
+  }
+  .experience .owl-theme .owl-nav{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    margin-top: 0 !important;
+  }
+  .experience .owl-theme .owl-nav .owl-prev{
+    position: absolute;
+    left: 0;
+    display: block;
+  }
+  .experience .owl-theme .owl-nav .owl-next{
+    position: absolute;
+    right: 0;
+    display: block;
+  }
+  .experience .owl-theme .owl-nav button{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: red !important;
+    color: white !important;
+  }

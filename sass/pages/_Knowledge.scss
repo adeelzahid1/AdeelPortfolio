@@ -1,0 +1,78 @@
+.knowledge{
+    position: relative;
+
+    &__knowledge-row{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        padding-top: 95px;
+        padding-bottom:138.3px;
+        @include respond(big-desktop-min-2){
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        @include respond(zero-size-1){
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+    &__knowledge-col{
+        width: 100%;
+        max-width: 33%;
+;
+       @include respond(tab-land-6){
+        padding-left: 1.5rem;
+       }
+    
+       @include respond(phone){
+           max-width: 100%;
+            padding-bottom: 2rem;
+           &:not(:first-child){
+               margin-top: 1.35rem;
+               
+           }
+       }
+    }
+    @include respond(phone){
+        .knowledge-border{
+            // border-top: 1px solid #55556a;
+            padding-top: 1.25rem;
+        }
+    }
+    &__knowledge-check{
+        display: inline-block;
+        font-size: 14px;
+        i{
+            color: red;
+            display: inline-block;
+        }
+        
+    }
+    
+    &__knowledge-item{
+        
+        &:not(:first-child){
+            margin-top: 24px;
+            @include respond(big-desktop-min-2){
+                margin-top: 18px;
+            }
+            @include respond(zero-size-1){
+                margin-top: 14px;
+            }
+        }
+    }
+    &__knowledge-check{
+        padding-right: 38.3px;
+        @include respond(phone-md){
+            padding-right:10px ;
+        }
+    }
+    &__knowledge-link{
+        font-size: 14px;
+        color: #fff;
+        display: inline-block;
+       
+    }
+}
