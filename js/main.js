@@ -192,7 +192,7 @@ $("#main-nav a").on('click', function(event) {
 });
 // typing text animation script
 let typed = new Typed(".typing", {
-  strings: ["ABC"],
+  strings: ["HTML","CSS", "BOOTSTRAP", "JS", "TS", "JQUERY", "ANGULAR JS", "ANGULAR", "DOT NET MVC5", "DOT NET CORE", "WEB API'S", "SQL", "CLEAN CODE"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true
