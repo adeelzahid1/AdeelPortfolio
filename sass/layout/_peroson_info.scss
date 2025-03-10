@@ -291,27 +291,29 @@
         align-items: center;
         padding-top: 1rem;
     }
+   
     &__person-icon{
         font-size:17px;
         color: #fff;
         transition: all 0.3s ease-in-out;
         display: block;
-        width: 50px;
+        width: 60px;
         height: 44px;
         line-height: 44px;
         color:#6f778a;
-       
-        
+        border-left:1px solid  #55556A;
+        text-align:center;
     }
     
     &__person-icon-center{
-        width:80px ;
-        text-align: center !important;
-        border-left:1px solid  #55556A;
+        // width:80px ;
+        // text-align: center !important;
+        // border-left:1px solid  #55556A;
     }
     &__person-icon-right{
+        width: 40px;
         text-align: right !important;
-        border-left:1px solid  #55556A;
+        // border-left:1px solid  #55556A;
     }
   
   
@@ -347,6 +349,7 @@
 
 
 .quick{
+    
     &__quick-icon{
         margin: 0 3px;
         display: flex;
@@ -356,7 +359,7 @@
         cursor: pointer;
         position: relative;
         z-index: 2;
-        // border: 1px solid red;
+        
     }
    
     &__tooltip{

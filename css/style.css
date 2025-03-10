@@ -714,17 +714,15 @@ nav #show-search:checked ~ .search-box {
     color: #fff;
     transition: all 0.3s ease-in-out;
     display: block;
-    width: 50px;
+    width: 60px;
     height: 44px;
     line-height: 44px;
-    color: #6f778a; }
-  .person__person-icon-center {
-    width: 80px;
-    text-align: center !important;
-    border-left: 1px solid  #55556A; }
+    color: #6f778a;
+    border-left: 1px solid  #55556A;
+    text-align: center; }
   .person__person-icon-right {
-    text-align: right !important;
-    border-left: 1px solid  #55556A; }
+    width: 40px;
+    text-align: right !important; }
   .person__person-tooltip-a {
     font-size: 12px;
     display: block;
@@ -877,30 +875,6 @@ nav #show-search:checked ~ .search-box {
   line-height: 30px;
   display: block; }
 
-.footer__footer-social-icon {
-  margin-top: 24px; }
-
-.footer__social-icon-a, .footer__social-icon-1, .footer__social-icon-5 {
-  font-size: 15px;
-  display: inline-block;
-  color: #55556a;
-  transition: all 0.3s ease; }
-  .footer__social-icon-a:hover, .footer__social-icon-1:hover, .footer__social-icon-5:hover {
-    color: #3D3D52; }
-
-.footer__social-icon-a {
-  width: 100%;
-  max-width: 48px;
-  text-align: center;
-  border-left: 1px solid #55556A; }
-
-.footer__social-icon-1, .footer__social-icon-5 {
-  width: 100%;
-  max-width: 35.4px; }
-  .footer__social-icon-1:not(:first-child), .footer__social-icon-5:not(:first-child) {
-    border-left: 1px solid #55556A;
-    padding-left: 20px; }
-
 .footer__footer-bottom {
   padding: 23px 0;
   display: flex;
@@ -917,6 +891,44 @@ nav #show-search:checked ~ .search-box {
 .footer__footer-c {
   font-size: 12px;
   padding-right: 5px; }
+
+.social-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px; }
+
+.icon-button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  transition: all  0.3s ease; }
+
+.github {
+  background-color: black; }
+
+.linkedin {
+  background-color: #0077b5; }
+
+.google {
+  background-color: #db4437; }
+
+.gitlab {
+  background-color: #fc6d26; }
+
+.facebook {
+  background-color: #3b5998; }
+
+.icon-button:hover {
+  background-color: #000000; }
+
+.icon-button:hover.github {
+  background-color: #333333; }
 
 .container {
   width: 100%;
@@ -997,6 +1009,8 @@ nav #show-search:checked ~ .search-box {
       @media (max-width: 1400px) {
         .section__section-center-icon i {
           font-size: 24px; } }
+  .section__inner-section {
+    position: relative; }
   .section__section-h1 {
     font-size: 120px;
     color: #272739;
@@ -1012,8 +1026,8 @@ nav #show-search:checked ~ .search-box {
     font-weight: bold;
     color: var(--subTitle);
     position: absolute;
-    top: 28%;
-    left: 0.4%; }
+    top: 40%;
+    left: 0.6%; }
     @media (max-width: 1400px) {
       .section__section-fixed {
         font-size: 24px;
@@ -1080,6 +1094,46 @@ nav #show-search:checked ~ .search-box {
 
 .hrrr {
   color: #fff !important; }
+
+.about {
+  position: relative; }
+
+.about-inner-container {
+  margin-top: 66px;
+  margin-bottom: 70px; }
+
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 24px; }
+
+.about-col-6 {
+  width: 100%;
+  max-width: 31%;
+  padding: 20px;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out; }
+
+.about-col-6:hover {
+  box-shadow: 0px 4px 10px rgba(97, 97, 97, 0.1); }
+
+.about-item {
+  display: flex; }
+
+.about-icon {
+  font-size: 22px;
+  color: #007bff;
+  margin-right: 12px; }
+
+.about-text {
+  font-size: 14px;
+  color: #55556A;
+  font-weight: normal;
+  line-height: 20px; }
 
 .education {
   position: relative; }
@@ -1746,12 +1800,8 @@ https://ant.design/components/progress/
   .testimonial__testimonial-col-7 {
     width: 100%;
     max-width: 52%;
-    padding: 22px 18px 23px 20px;
-    background-color: #fff;
-    max-height: 205px;
-    /* Maximum height */
-    overflow-y: auto;
-    /* Vertical scrolling enabled */ }
+    padding: 4px 18px 8px 20px;
+    background-color: #fff; }
     @media (max-width: 967px) {
       .testimonial__testimonial-col-7 {
         max-width: 90%;

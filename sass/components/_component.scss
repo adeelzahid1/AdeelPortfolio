@@ -95,6 +95,9 @@
             }
         }
     }
+    &__inner-section{
+        position: relative;
+    }
     &__section-h1{
         font-size: 120px;
         color: #272739;
@@ -115,8 +118,8 @@
         // color: #fff;
         color: var(--subTitle);
         position: absolute;
-        top: 28%;
-        left: 0.4%;
+        top: 40%;
+        left: 0.6%;
         @include respond(big-desktop-min-2){
             font-size: 24px;
             top: 22%;
