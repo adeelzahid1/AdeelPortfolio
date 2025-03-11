@@ -140,6 +140,7 @@ $("#main-nav a").on('click', function(event) {
     }
   });
   
+  
   function toggle(){
     var trailer = document.querySelector(".trailer")
     trailer.classList.toggle("active")
@@ -206,7 +207,37 @@ var swiper = new Swiper(".mySwiper2", {
 });
 ////// close tag
 
+$(document).ready(function () {
+  $(".circle").each(function () {
+      let percentage = $(this).attr("data-percent");
+      let circlePath = $(this).find(".active");
+      let text = $(this).find(".text");
 
+      // Calculate stroke-dasharray based on percentage
+      let circumference = 295.31; // Original length of circle path
+      let dashArray = (circumference * percentage) / 100;
+
+      // Animate progress
+      $(circlePath).css({
+          "stroke-dasharray": dashArray + ", 295.31"
+      });
+
+      // Animate text percentage count
+      $({ countNum: 0 }).animate(
+          { countNum: percentage },
+          {
+              duration: 1000,
+              easing: "swing",
+              step: function () {
+                  text.text(Math.floor(this.countNum) + "%");
+              },
+              complete: function () {
+                  text.text(percentage + "%");
+              }
+          }
+      );
+  });
+});
 
 
 
