@@ -1789,16 +1789,17 @@ nav #show-search:checked ~ .search-box {
     @media (max-width: 667px) {
       .language__language-dots-flex {
         margin-top: 30px; } }
-  .language__language-span {
+  .language__language-span, .language__language-span-light {
     width: 100%;
     max-width: 20px;
     height: 4px;
-    background-color: #ED2B23;
     display: inline-block; }
-    .language__language-span:not(:first-child) {
+    .language__language-span:not(:first-child), .language__language-span-light:not(:first-child) {
       margin-left: 10px; }
+  .language__language-span {
+    background-color: #ED2B23; }
   .language__language-span-light {
-    background-color: #55556A; }
+    background-color: #55556A !important; }
 
 .interests {
   position: relative; }

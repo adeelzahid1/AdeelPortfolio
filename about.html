@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Proficiency</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+
+        .language__language-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .language__language-col-3 {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+        }
+
+        .language__language-h1 {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .language__language-dots-flex {
+            display: flex;
+            gap: 5px;
+        }
+
+        .language__language-span {
+            width: 12px;
+            height: 12px;
+            background-color: red;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        .language__language-span-light {
+            width: 12px;
+            height: 12px;
+            background-color: gray;
+            display: inline-block;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Language Proficiency</h1>
+
+    <div class="language__language-row">
+        <div class="language__language-col-3 language-border-top" data-score="90">
+            <div class="language__language-content">
+                <span class="language__language-span-title">100 / 90</span>
+                <h1 class="language__language-h1">Urdu</h1>
+                <div class="language__language-dots-flex"></div>
+            </div>
+        </div>
+
+        <div class="language__language-col-3" data-score="90">
+            <div class="language__language-content">
+                <span class="language__language-span-title">100 / 40</span>
+                <h1 class="language__language-h1">English</h1>
+                <div class="language__language-dots-flex"></div>
+            </div>
+        </div>
+
+        <div class="language__language-col-3 language__language-mt-3" data-score="25">
+            <div class="language__language-content">
+                <span class="language__language-span-title">100 / 25</span>
+                <h1 class="language__language-h1">Arabic</h1>
+                <div class="language__language-dots-flex"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Buttons to update proficiency dynamically -->
+
+    <script>
+        $(document).ready(function () {
+            $(".language__language-col-3").each(function () {
+                let score = $(this).data("score"); // Get score value
+                let totalDots = 10; // Total number of dots
+                let filledDots = Math.round((score / 100) * totalDots); // Calculate filled dots
+
+                let dotsContainer = $(this).find(".language__language-dots-flex");
+                for (let i = 0; i < totalDots; i++) {
+                    let spanClass = i < filledDots ? "language__language-span" : "language__language-span-light";
+                    dotsContainer.append(`<span class="${spanClass}"></span>`);
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

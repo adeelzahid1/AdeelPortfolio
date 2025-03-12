@@ -237,6 +237,22 @@ $(document).ready(function () {
           }
       );
   });
+
+
+  // 
+
+
+  $(".language__language-col-3").each(function () {
+    let score = $(this).data("score"); // Get score value
+    let totalDots = 10; // Total number of dots
+    let filledDots = Math.round((score / 100) * totalDots); // Calculate filled dots
+
+    let dotsContainer = $(this).find(".language__language-dots-flex");
+    for (let i = 0; i < totalDots; i++) {
+        let spanClass = i < filledDots ? "language__language-span" : "language__language-span-light";
+        dotsContainer.append(`<span class="${spanClass}"></span>`);
+    }
+});
 });
 
 
