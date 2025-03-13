@@ -1,203 +1,99 @@
+// ===================================
+// 2. about Faqs
+// ===================================
 const faqs = document.querySelectorAll(".according__faq");
-const answer = document.querySelectorAll(".according__answer");
-// faqs.forEach((faq )=>{
-//   faq.addEventListener('click',function(){
-//     faq.classList.toggle('active');
+const answers = document.querySelectorAll(".according__answer");
 
-//   })
-// });
+faqs.forEach((faqItem, index) => {
+    faqItem.addEventListener('click', () => {
+        // Remove active class from all
+        faqs.forEach(item => item.classList.remove('active'));
+        answers.forEach(answerItem => answerItem.classList.remove('active'));
 
-
-faqs.forEach((tab,index)=>{
-  tab.addEventListener('click',function(){
-    // To remove active class from previous tab
-    faqs.forEach((tab) =>{
-      return tab.classList.remove('active');
+        // Add active class to clicked item
+        faqItem.classList.add('active');
+        answers[index].classList.add('active');
     });
-    
-    tab.classList.add('active')  ;
-
-    //To Hide Previous tab content
-    answer.forEach((c)=>{
-      return c.classList.remove('active')
-    })
-    // To Show Content According To Tab Selected
-    answer[index].classList.add('active')
-  })
 });
 
-// faqs[0].addEventListener('click',function(){});
 
-// dark mode 
-// const body = document.querySelector("body"),
-//       modeToggle = document.querySelector(".dark-light"),
-//       heroBg = document.querySelector(".person__person-bg"),
-//       footerBg = document.querySelector(".footer__footer-bg-main-img");
 
-//       let getMode = localStorage.getItem("mode");
-//       if(getMode && getMode === "dark-mode"){
-//         body.classList.add("dark");
-//       }
 
-// // js code to toggle dark and light mode
-//   modeToggle.addEventListener("click" , () =>{
-//     modeToggle.classList.toggle("active");
-    
-//     body.classList.toggle("dark");
-    
-//     // js code to keep user selected mode even page refresh or file reopen
-//     if(!body.classList.contains("dark")){
-//         localStorage.setItem("mode" , "light-mode");
-//         heroBg.classList.add("no-bg");
-//     footerBg.classList.add("no-bg");
-        
-//     }else{
-//         localStorage.setItem("mode" , "dark-mode");
-//         heroBg.classList.remove("no-bg");
-//         footerBg.classList.remove("no-bg");
-//     }
-    
-//   });
-const body = document.querySelector("body"),
-      modeToggle = document.querySelector(".dark-light"),
-      heroBg = document.querySelector(".person__person-bg"),
-      footerBg = document.querySelector(".footer__footer-bg-main-img");
+// ===================================
+// 2. Dark Mode Toggle
+// ===================================
+const body = document.body;
+const modeToggle = document.querySelector(".dark-light");
+const heroBg = document.querySelector(".person__person-bg");
+const footerBg = document.querySelector(".footer__footer-bg-main-img");
 
-// Get mode from localStorage
-let getMode = localStorage.getItem("mode");
-
-// Apply mode on page load
-if (getMode === "dark-mode") {
-    body.classList.add("dark");
-    heroBg.classList.remove("no-bg");
-    footerBg.classList.remove("no-bg");
-} else {
-    body.classList.remove("dark");
-    heroBg.classList.add("no-bg");
-    footerBg.classList.add("no-bg");
+// Function to apply dark mode
+function applyDarkMode(isDark) {
+    body.classList.toggle("dark", isDark);
+    heroBg.classList.toggle("no-bg", !isDark);
+    footerBg.classList.toggle("no-bg", !isDark);
+    localStorage.setItem("mode", isDark ? "dark-mode" : "light-mode");
 }
 
-// Toggle mode on button click
+// Load mode from localStorage
+applyDarkMode(localStorage.getItem("mode") === "dark-mode");
+
+// Event listener for toggle button
 modeToggle.addEventListener("click", () => {
-    modeToggle.classList.toggle("active");
-    body.classList.toggle("dark");
+    const isDark = !body.classList.contains("dark");
+    applyDarkMode(isDark);
+});
+// ===================================
+// 3. Header Appearance on Scroll
+// ===================================
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
 
-    if (body.classList.contains("dark")) {
-        localStorage.setItem("mode", "dark-mode");
-        heroBg.classList.remove("no-bg");
-        footerBg.classList.remove("no-bg");
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= 250) {
+        header.classList.add("header-appear");
     } else {
-        localStorage.setItem("mode", "light-mode");
-        heroBg.classList.add("no-bg");
-        footerBg.classList.add("no-bg");
+        header.classList.remove("header-appear");
     }
 });
 
 
-$(document).ready(function(){
-
-// Init Scrollspy
-$('body').scrollspy({
-  target: '#main-nav'
-});
-
-// Smooth Scrolling
-$("#main-nav a").on('click', function(event) {
-  if (this.hash !== "") {
-      event.preventDefault();
-
-      const hash = this.hash;
-
-      $('html, body').animate({
-          scrollTop: $(hash).offset().top
-      }, 800, function() {
-
-          window.location.hash = hash;
-      });
+// ===================================
+// 5. Owl Carousel Setup
+// ===================================
+$(".owl-products").owlCarousel({
+  items: 1,
+  dots: true,
+  nav: false,
+  loop: false,
+  // center:true,
+  autoplay: false,
+  autoplayHoverPause:false,
+  slideSpeed: 3000,
+  paginationSpeed: 5000,
+  smartSpeed:1000,
+  margin:0,
+  responsive: {
+      576: { items: 2 },
+      768: { items: 3 }
   }
 });
 
-///////         Menu-Bar
-  $("#menu-bar").on('click',function(){
-    $('.nav__nav-list').addClass('show')
-  });
-  $("#close-bar").on('click',function(){
-    $('.nav__nav-list').removeClass('show')
-  });
+// ===================================
+// 6. Typing Animation
+// ===================================
+const skills = ["HTML", "CSS", "BOOTSTRAP", "JS", "TS", "JQUERY", "ANGULAR JS", "ANGULAR", "DOT NET MVC5", "DOT NET CORE", "WEB API'S", "SQL", "CLEAN CODE"];
 
-  $('#show-search').on('click',function(){
-    $('.fa-search').toggleClass("fa-regular fa-xmark");
-    $('.nav__search-box').toggleClass('searchBoxShow')
-  })
-
- 
-  $(window).on('scroll', function () {
-    if ($(this).scrollTop() >= 250) { // Set position from top to add class
-        $('header').addClass('header-appear');
-    }
-    else {
-        $('header').removeClass('header-appear');
-    }
-  });
-  
-  
-  function toggle(){
-    var trailer = document.querySelector(".trailer")
-    trailer.classList.toggle("active")
-  }
-
-  $(window).scroll(function(){
-    if($(window).scrollTop() > 300){
-      $('.back-to-top').css({
-        "opacity":"1", "pointer-events":"auto"
-      });
-    }else{
-      $('.back-to-top').css({
-        "opacity":"0", "pointer-events":"none"
-      });
-    }
-  });
-  $('.back-to-top').click(function(){
-    $('html').animate({scrollTop:0}, 500);
-  });
-
- $(".owl-products").owlCarousel({
-        items: 1,
-        dots: true,
-        nav: false,
-        loop: false,
-        // center:true,
-        autoplay: false,
-        autoplayHoverPause:false,
-        slideSpeed: 3000,
-        paginationSpeed: 5000,
-        smartSpeed:1000,
-        margin:0,
-        responsive: {
-            576: {
-                items: 2,
-                
-            },
-            768: {
-                items:3,
-            }
-          
-           
-            
-        }
-      });
-     
-     
-
-
+new Typed(".typing", {
+    strings: skills,
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
 });
-// typing text animation script
-let typed = new Typed(".typing", {
-  strings: ["HTML","CSS", "BOOTSTRAP", "JS", "TS", "JQUERY", "ANGULAR JS", "ANGULAR", "DOT NET MVC5", "DOT NET CORE", "WEB API'S", "SQL", "CLEAN CODE"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  loop: true
-});
+// ===================================
+// 7. mySwiper2
+// ===================================
+
 var swiper = new Swiper(".mySwiper2", {
   direction: "vertical",
   pagination: {
@@ -205,43 +101,64 @@ var swiper = new Swiper(".mySwiper2", {
     clickable: true,
   },
 });
-////// close tag
 
+
+// ===================================
+// 8. Menu and Search Bar Toggle
+// ===================================
+$(document).ready(() => {
+  $("#menu-bar").click(() => $('.nav__nav-list').addClass('show'));
+  $("#close-bar").click(() => $('.nav__nav-list').removeClass('show'));
+
+  $('#show-search').click(() => {
+      $('.fa-search').toggleClass("fa-xmark");
+      $('.nav__search-box').toggleClass('searchBoxShow');
+  });
+});
+
+// ===================================
+// 9. Smooth Scroll
+// ===================================
+document.querySelectorAll("#main-nav a").forEach(anchor => {
+  anchor.addEventListener("click", (event) => {
+      if (anchor.hash) {
+          event.preventDefault();
+          document.querySelector(anchor.hash).scrollIntoView({
+              behavior: "smooth"
+          });
+      }
+  });
+});
+// ===================================
+// 10. circle
+// ===================================
 $(document).ready(function () {
   $(".circle").each(function () {
-      let percentage = $(this).attr("data-percent");
-      let circlePath = $(this).find(".active");
-      let text = $(this).find(".text");
+      const percentage = $(this).data("percent");
+      const circlePath = $(this).find(".active");
+      const text = $(this).find(".text");
+      const circumference = 295.31; // Full circle length
 
-      // Calculate stroke-dasharray based on percentage
-      let circumference = 295.31; // Original length of circle path
-      let dashArray = (circumference * percentage) / 100;
+      // Set stroke-dasharray for progress effect
+      circlePath.css("stroke-dasharray", `${(circumference * percentage) / 100}, ${circumference}`);
 
-      // Animate progress
-      $(circlePath).css({
-          "stroke-dasharray": dashArray + ", 295.31"
-      });
-
-      // Animate text percentage count
-      $({ countNum: 0 }).animate(
-          { countNum: percentage },
-          {
-              duration: 1000,
-              easing: "swing",
-              step: function () {
-                  text.text(Math.floor(this.countNum) + "%");
-              },
-              complete: function () {
-                  text.text(percentage + "%");
-              }
+      // Animate percentage text update
+      $({ countNum: 0 }).animate({ countNum: percentage }, {
+          duration: 1000,
+          easing: "swing",
+          step: function () {
+              text.text(`${Math.floor(this.countNum)}%`);
+          },
+          complete: function () {
+              text.text(`${percentage}%`);
           }
-      );
+      });
   });
-
-
-  // 
-
-
+});
+// ===================================
+// 10. language small do
+// ===================================
+$(document).ready(function () {
   $(".language__language-col-3").each(function () {
     let score = $(this).data("score"); // Get score value
     let totalDots = 10; // Total number of dots
@@ -255,7 +172,27 @@ $(document).ready(function () {
 });
 });
 
-
+// ===================================
+// 4. Back to Top Button
+// ===================================
+$(document).ready(() => {
+  $(window).scroll(function(){
+    if($(window).scrollTop() > 300){
+      $('.back-to-top').css({
+        "opacity":"1", "pointer-events":"auto"
+      });
+    }else{
+      $('.back-to-top').css({
+        "opacity":"0", "pointer-events":"none"
+      });
+    }
+  });
+  
+  $('.back-to-top').click(function(){
+    $('html').animate({scrollTop:0}, 500);
+  });
+  
+  });
 
 
 

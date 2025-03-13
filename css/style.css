@@ -36,13 +36,15 @@ p {
   --text-color: #3f4347;
   --subTitle: #3a4f65;
   --body-color: #daf1dc;
+  --text-red-icon:#ED2B23;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 body.dark {
   --body-color: #030318;
   --subTitle: #3f4347;
-  --text-color: #fff; }
+  --text-color: #fff;
+  --text-red-icon:#007bff; }
 
 .swiper {
   width: 100%;
@@ -1132,7 +1134,7 @@ nav #show-search:checked ~ .search-box {
 
 .about-icon {
   font-size: 22px;
-  color: #007bff;
+  color: var(--text-red-icon);
   margin-right: 12px;
   transition: all 0.3s ease; }
 
