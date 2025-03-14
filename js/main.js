@@ -106,14 +106,25 @@ var swiper = new Swiper(".mySwiper2", {
 // ===================================
 // 8. Menu and Search Bar Toggle
 // ===================================
+$(document).ready(function () {
+  $('#menu-bar').click(function () {
+      $('.nav__nav-list').addClass('open');
+      $('.overlay').addClass('show');
+  });
+
+  $('#close-bar, .nav__nav-item, .overlay').click(function () {
+      $('.nav__nav-list').removeClass('open');
+      $('.overlay, .nav__nav-item').removeClass('show');
+  });
+});
+// Search bar
 $(document).ready(() => {
-  $("#menu-bar").click(() => $('.nav__nav-list').addClass('show'));
-  $("#close-bar").click(() => $('.nav__nav-list').removeClass('show'));
 
   $('#show-search').click(() => {
       $('.fa-search').toggleClass("fa-xmark");
       $('.nav__search-box').toggleClass('searchBoxShow');
   });
+  
 });
 
 // ===================================

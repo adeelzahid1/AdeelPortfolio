@@ -210,3 +210,22 @@ $(window).on('scroll', function () {
           }
       });
       });
+
+
+      $(document).ready(function () {
+        $("#menu-bar").on("click", function () {
+            $(".nav__nav-list").addClass("show");
+        });
+    
+        $("#close-bar").on("click", function () {
+            $(".nav__nav-list").removeClass("show");
+        });
+    
+        // Close navbar if clicked outside
+        $(document).on("click", function (event) {
+            if (!$(event.target).closest(".nav__nav-list, #menu-button").length) {
+                $(".nav__nav-list").removeClass("show");
+            }
+        });
+    });
+   

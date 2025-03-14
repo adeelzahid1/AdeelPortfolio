@@ -9,7 +9,8 @@ body {
   color: white;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: var(--body-color); }
+  background-color: var(--body-color);
+  position: relative; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
@@ -207,6 +208,19 @@ body.dark {
   .dark-light {
     right: 33%; } }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61);
+  display: none;
+  z-index: 99; }
+
+.overlay.show {
+  display: block; }
+
 .nav {
   position: absolute;
   top: 0px;
@@ -280,7 +294,6 @@ body.dark {
     left: 30px;
     z-index: -1; }
   .nav__nav-list {
-    display: flex;
     position: fixed;
     top: 0px;
     right: -100%;
@@ -291,9 +304,10 @@ body.dark {
     background: white;
     padding-top: 3rem;
     padding-left: 40px;
-    transition: all 0.3s ease;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.5s ease-in-out;
     overflow-y: auto;
-    z-index: 2;
+    z-index: 100;
     padding-top: 103px; }
     @media (max-width: 480px) {
       .nav__nav-list {
@@ -475,7 +489,7 @@ nav #show-search:checked ~ .search-box {
   opacity: 1;
   pointer-events: auto; }
 
-.nav .show {
+.nav .open {
   right: 0; }
 
 .typing {
@@ -1173,15 +1187,16 @@ nav #show-search:checked ~ .search-box {
   .education__education_h2 {
     font-size: 20px;
     letter-spacing: 25;
-    line-height: 30px;
+    line-height: 24px;
     font-weight: 600;
-    color: var(--text-color);
-    margin-top: 4.3px; }
+    margin-top: 11px;
+    margin-bottom: 4px;
+    color: var(--text-color); }
   .education__education-p {
     font-size: 14px;
     color: #55556A;
     font-weight: 400;
-    margin-top: 9.7px; }
+    line-height: 24px; }
   .education__education-bottom-row {
     display: flex;
     flex-wrap: wrap;
