@@ -26,7 +26,7 @@
         padding-top: 110px;
     }
     @include respond(zero-size-1){
-        padding-left:30px ;
+        padding-left:24px ;
         height: 550px;
     }
     &__person-bg{
@@ -197,12 +197,15 @@
         @include respond(tab-port){
             left: 314px;
         }
-        @include respond(phone){
+        @include respond(phone-md-2){
 
-            left: 60px;
+            left: 58px;
             font-size: 15px !important;
             color: red !important;
             bottom: -21px;
+        }
+        @include respond(zero-size-1){
+            font-size: 12px !important;
         }
       
     }
@@ -228,7 +231,7 @@
        
         }
         @include respond(zero-size-1){
-            font-size: 25px;
+            font-size: 21px;
             
         }
     }

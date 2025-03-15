@@ -60,7 +60,8 @@
 }
 
 .about-col-6:hover .about-icon {
-    color: #0153aa;
+    color: $color-lightred;
+    transform: scale(1.1);
 }
 
 .about-text {
@@ -68,4 +69,8 @@
     color: #55556A;
     font-weight: normal;
     line-height: 20px;
+    transition: all 0.3s ease;
+}
+.about-col-6:hover .about-text{
+    color:$color-lightblue;
 }

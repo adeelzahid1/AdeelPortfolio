@@ -14,6 +14,7 @@
     &__experience-col{
         padding-left: 30px;
         padding-right: 30px;
+       
         @include respond(tab-port){
             padding-left: 20px;
             padding-right: 20px;
@@ -26,21 +27,32 @@
     background-color: #3D3D52;
     margin-top: 29.7px;
     margin-bottom: 25.7px;
+    transition: all 0.2s ease-in-out;
     @include respond(big-desktop-min-2){
         margin-top: 25.7px;
         margin-bottom: 20.7px;
     }
    } 
    &__experience-img{
+    
        i{
         display: inline-block;
         font-size: 45px;
         // color: #fff;
         color: var(--text-color);
+        transition: all 0.2s ease-in-out;
         @include respond(big-desktop-min-2){
             font-size: 38px;
         }
        }
+   }
+   &__experience-col:hover &__experience-img i{
+             color: $color-danger;
+             transform: scale(1.2);
+   }
+   &__experience-col:hover &__experience-line{
+            background-color: $color-danger;
+             
    }
    &__experience-date{
        font-size: 14px;
@@ -55,8 +67,9 @@
        line-height: 30px;
        letter-spacing: 25;
        margin-bottom: 23.7px;
+
     //    color: #fff;
-    color: var(--text-color);
+       color: var(--text-color);
        @include respond(big-desktop-min-2){
            font-size: 18px;
            margin-bottom: 18.7px;
@@ -70,6 +83,12 @@
            line-height: 27px;
        }
     //    padding-bottom: 60px;
+   }
+   &__experience-col:hover &__experience-h2{
+    color: var(--text-lightTitle);
+   }
+   &__experience-col:hover &__experience-p{
+         color:$color-lightblue;
    }
    &__experience-a{
        font-size: 14px;

@@ -47,7 +47,12 @@
            font-size: 38px;
            display: block;
            color: #ED2B23;
+           transition: all 0.2s ease;
        }
+    }
+    &__services-col-6:hover &__services-img i{
+        color: $color-lightred;
+        transform: scale(1.2);
     }
     &__services-mobile{
         padding-right: 67px;
@@ -62,13 +67,22 @@
         line-height: 30px;
         letter-spacing: 25;
         font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    &__services-col-6:hover &__services-h2{
+        color:var(--text-lightTitle);
+        
     }
     &__services-p{
         font-size: 14px;
         color: #55556A;
         line-height: 30px;
         margin-top: 8.7px;
+        transition: all 0.3s ease;
         // font-weight: 400;
+    }
+    &__services-col-6:hover &__services-p{
+        color:$color-lightblue;
     }
     &__services-row-flex{
         display: flex;

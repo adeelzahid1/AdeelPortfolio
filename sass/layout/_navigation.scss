@@ -119,20 +119,31 @@
   
     &__nav-logo{
         img{
-            margin-top: 73px;
+            // margin-top: 73px;
             // vertical-align: middle;
             // width: 125px;
             // height: 47px;
+            padding-top: 10px;
             object-fit: cover;
-            max-width: 125px;
+            max-width: 300px;
+            @include respond(phone-md-2){
+                max-width: 212px;
+            }
+            @include respond(zero-size-1){
+                max-width: 150px;
+            }
         }
     }
     &__nav-mobile-img{
         position: absolute;
-        top: 48px;
-        left: 30px;
+        top: 39px;
+        left: 9px;
         z-index: -1;
         // padding-bottom: 20px;
+        img{
+            width: 100%;
+            max-width: 228px;
+        }
     }
     &__nav-list{
         

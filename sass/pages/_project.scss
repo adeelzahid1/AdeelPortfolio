@@ -75,7 +75,7 @@
         }
     }
     &__project-number{
-        color:#ED2B23;
+        color: $color-danger;
         font-size:32px;
         font-weight: bold;
     }
@@ -85,11 +85,17 @@
         color: var(--text-color);
         font-weight: bold;
         line-height: 30px;
+        transition: all 0.3s ease;
         @include respond(big-desktop-min-2){
             font-size: 22px;
             line-height: 28px;
         }
     }
+    &__project-row:hover &__description-h3,
+    &__project-row:hover &__project-h2,
+    &__project-row:hover &__project-h3{
+    color: $color-lightred;
+}
     &__project-date{
         font-size: 12px;
         display: inline-block;
@@ -119,6 +125,7 @@
         font-size: 12px;
         line-height: 30px;
         color: #55556a;
+        transition: all 0.3s ease;
     }
     &__description-h3{
         font-size: 18px;
@@ -132,9 +139,14 @@
         color: #55556a;
         line-height: 30px;
         margin-top: 8px;
+        transition: all 0.3s ease;
         @include respond(big-desktop-min-2){
             line-height: 26px;
             
         }
+    }
+    &__project-row:hover &__description-text,
+    &__project-row:hover &__project-span{
+        color: $color-lightblue;
     }
 }

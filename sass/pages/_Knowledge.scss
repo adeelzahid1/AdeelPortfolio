@@ -44,9 +44,12 @@
     &__knowledge-check{
         display: inline-block;
         font-size: 14px;
+       
         i{
+            transition: all 0.1s ease-in-out;
             color: red;
             display: inline-block;
+         
         }
         
     }
@@ -63,6 +66,10 @@
             }
         }
     }
+    &__knowledge-item:hover &__knowledge-check i{
+        color: $color-lightred;
+        transform: scale(1.2);
+    }
     &__knowledge-check{
         padding-right: 38.3px;
         @include respond(phone-md){
@@ -74,6 +81,10 @@
         // color: #fff;
         color: var(--text-color);
         display: inline-block;
+        transition: all 0.3s ease;
        
+    }
+    &__knowledge-item:hover &__knowledge-link{
+        color:$color-lightwhite;
     }
 }
