@@ -85,10 +85,10 @@
     //    padding-bottom: 60px;
    }
    &__experience-col:hover &__experience-h2{
-    color: var(--text-lightTitle);
+    color: $color-lightred;
    }
    &__experience-col:hover &__experience-p{
-         color:$color-lightblue;
+        //  color:$color-lightblue;
    }
    &__experience-a{
        font-size: 14px;

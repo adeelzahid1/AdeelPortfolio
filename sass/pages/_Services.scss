@@ -70,7 +70,7 @@
         transition: all 0.3s ease;
     }
     &__services-col-6:hover &__services-h2{
-        color:var(--text-lightTitle);
+        color: $color-lightred;
         
     }
     &__services-p{
@@ -81,9 +81,7 @@
         transition: all 0.3s ease;
         // font-weight: 400;
     }
-    &__services-col-6:hover &__services-p{
-        color:$color-lightblue;
-    }
+   
     &__services-row-flex{
         display: flex;
         // flex-wrap: wrap;

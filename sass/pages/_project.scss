@@ -139,14 +139,10 @@
         color: #55556a;
         line-height: 30px;
         margin-top: 8px;
-        transition: all 0.3s ease;
         @include respond(big-desktop-min-2){
             line-height: 26px;
             
         }
     }
-    &__project-row:hover &__description-text,
-    &__project-row:hover &__project-span{
-        color: $color-lightblue;
-    }
+    
 }

@@ -65,6 +65,10 @@
         line-height: 33px;
         font-weight: bold;
         margin-top: -10px;
+        transition: all 0.3s ease;
+    }
+    &__language-col-3:hover &__language-h1{
+        color: $color-lightred;
     }
     &__language-dots-flex{
         margin-top: 41.9px;

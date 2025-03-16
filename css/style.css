@@ -1181,7 +1181,7 @@ nav #show-search:checked ~ .search-box {
   transition: all 0.3s ease; }
 
 .about-col-6:hover .about-text {
-  color: #3c5086b7; }
+  color: #4b5e92b7; }
 
 .education {
   position: relative; }
@@ -1216,7 +1216,7 @@ nav #show-search:checked ~ .search-box {
     color: var(--text-color);
     transition: all 0.3s ease; }
   .education__education-col:hover .education__education_h2 {
-    color: var(--text-lightTitle); }
+    color: #e93630; }
   .education__education-p {
     font-size: 14px;
     color: #55556A;
@@ -1452,9 +1452,7 @@ nav #show-search:checked ~ .search-box {
       .experience__experience-p {
         line-height: 27px; } }
   .experience__experience-col:hover .experience__experience-h2 {
-    color: var(--text-lightTitle); }
-  .experience__experience-col:hover .experience__experience-p {
-    color: #3c5086b7; }
+    color: #e93630; }
   .experience__experience-a {
     font-size: 14px;
     display: block;
@@ -1630,14 +1628,10 @@ nav #show-search:checked ~ .search-box {
     font-size: 14px;
     color: #55556a;
     line-height: 30px;
-    margin-top: 8px;
-    transition: all 0.3s ease; }
+    margin-top: 8px; }
     @media (max-width: 1400px) {
       .project__description-text {
         line-height: 26px; } }
-  .project__project-row:hover .project__description-text,
-  .project__project-row:hover .project__project-span {
-    color: #3c5086b7; }
 
 .testimonial {
   position: relative;
@@ -1840,7 +1834,10 @@ nav #show-search:checked ~ .search-box {
     color: var(--text-color);
     line-height: 33px;
     font-weight: bold;
-    margin-top: -10px; }
+    margin-top: -10px;
+    transition: all 0.3s ease; }
+  .language__language-col-3:hover .language__language-h1 {
+    color: #e93630; }
   .language__language-dots-flex {
     margin-top: 41.9px;
     display: flex; }
@@ -2010,15 +2007,13 @@ nav #show-search:checked ~ .search-box {
     font-weight: 600;
     transition: all 0.3s ease; }
   .services__services-col-6:hover .services__services-h2 {
-    color: var(--text-lightTitle); }
+    color: #e93630; }
   .services__services-p {
     font-size: 14px;
     color: #55556A;
     line-height: 30px;
     margin-top: 8.7px;
     transition: all 0.3s ease; }
-  .services__services-col-6:hover .services__services-p {
-    color: #3c5086b7; }
   .services__services-row-flex {
     display: flex; }
   .services__services-content {
